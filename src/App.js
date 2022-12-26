@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import TaskList from "./TaskList";
+const App = () => {
+  const [inputList, setInputList] = useState();
+  const [Tasks, setTasks] = useState([]);
+  const itemEvent = (event) => {
+    setInputList(event.target.value);
+  };
+  const listOfTasks = () =>{
+setTasks((oldTasks) => {
+    return[...oldTasks, inputList];
+    });
+  };
+  const deleteTask = (id) => {
+        console.log("deleted");
 
-function App() {
+        setTasks((oldTasks) => {
+          return oldTasks.filter((arrElem, index) => {
+            return index !== id;
+          });
+        });
+    };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='centralDiv'>
+      <div className='todoDiv'>
+      <br />
+      <h1>Tasks</h1>
+      <br />
+      <input type="text" placeholder="Add a task" name="" id="" onChange={itemEvent} />
+      <button onClick={listOfTasks}> + </button>
+      <ol>
+        {             }
+
+       { Tasks.map((taskval, index) => {
+          
+         return <TaskList 
+         key = {index}
+         id = {index} text = {taskval}
+         onSelect={deleteTask}/>;
+        })}
+
+
+
+      </ol>
+      </div>
     </div>
+    </>
   );
-}
+};
 
 export default App;
