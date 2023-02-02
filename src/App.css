@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -31,7 +31,7 @@
 .centralDiv {
   width: 100%;
   height: 100vh;
-  background: cyan;
+  background: #7395AE;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -47,14 +47,14 @@ ol li {
   min-height: 40px;
   display: flex;
   align-items: center;
-  color: #8566aa;
+  color: #557A95;
   text-transform: capitalize;
 }
 
 h1 {
   color: white;
   background: transparent;
-  background-color: #8566aa;
+  background-color: #7395AE;
   padding: 6px 0 2px 0;
   margin-bottom: 10px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
@@ -69,14 +69,14 @@ input{
   font-size: 20px;
   font-weight: 500;
   width: 60%;
-  border-bottom: 2px solid #8566aa;
+  border-bottom: 2px solid #7395AE;
   outline: none;
 }
 
 .todoDiv{
-  width: 25%;
-  height: 80vh;
-  background-color: pink;
+  width: 40%;
+  height: 100vh;
+  background-color: #B1A296;
   box-shadow: 5px 5px 25px --5px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
 }
@@ -85,16 +85,16 @@ button {
   min-height: 40px;
   width: 40px;
   border-radius: 50%;
-  border-bottom: plum;
-  color: #fff;
-  font-size: 40px;
+  border: #7395AE;
+  color: #557A95;
+  font-size: 30px;
   outline: none;
   margin-left: 10px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+ 
 }
 
 button:hover {
-  background-color:aquamarine;
+  background-color: #7395AE;
 }
 
 .task_style {
@@ -110,10 +110,10 @@ button:hover {
   height: 20px;
   display: flex;
   justify-content: center;
-  background-color: #8566aa;
+  background-color: #7395AE;
   border-radius: 50%;
   margin: 0 15px 0 35px;
-  color: aliceblue;
+  color: #7395AE;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
